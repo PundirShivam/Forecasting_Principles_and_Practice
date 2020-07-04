@@ -1,6 +1,6 @@
 ## Forecasting: Principles and Practice
 
-This repository contains notes and solutions related to [Forecasting: Principles and Practice](https://otexts.com/fpp2/)
+This repository contains notes and solutions related to [Forecasting: Principles and Practice (2nd ed.)](https://otexts.com/fpp2/)
 by Rob J Hyndman and George Athanasopoulos.
 
 The work done here is part of an informal study group the schedule for which is outlined below:
@@ -14,6 +14,7 @@ The work done here is part of an informal study group the schedule for which is 
 |   2020-08-02  | Chapters 9 and 10     |   |
 |   2020-08-09  | Chapters 11 and 12    |   |
 
+We're using the 2nd edition instead of the newer 3rd. edition as it contains more exposition on a few topics of interest.
 The original textbook focuses on the R language, we've chosen instead to use Python.
 
 
