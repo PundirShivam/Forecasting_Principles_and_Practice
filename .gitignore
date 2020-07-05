@@ -6,7 +6,14 @@ __pycache__/
 # Pycharm
 *.idea/
 
-# local files
+# R
+*.Rhistory
+
+# LaTeX temporary files
+*.aux
+*.log
+*.toc
+*.texpadtmp
 
 # C extensions
 *.so
