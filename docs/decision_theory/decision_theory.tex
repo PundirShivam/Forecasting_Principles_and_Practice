@@ -4,6 +4,8 @@
 \documentclass[10pt]{beamer}
 
 \renewcommand{\theenumi}{\alph{enumi}}
+\usepackage{graphicx}
+
 \title[Statistical Decision Theory]{Introduction to Decision Theory}
 
 \author{Nishant D. Gurnani}
@@ -119,7 +121,6 @@ For estimating a real-valued parameter $\theta$ with decision $d \in \mathbb{R} 
 $$ L(\theta, d) = (\theta - d)^2$$ 
 }	
 \end{enumerate}
-
 	
 \end{frame}
 
@@ -127,14 +128,108 @@ $$ L(\theta, d) = (\theta - d)^2$$
 
 % Analyzing Procedures 1
 \begin{frame}
+\frametitle{Analyzing Procedures}
+Decision theory is useful because it allows us to analyze statistical procedures.
+\newline
+\newline
+The three components of a decision problem together give rise to our primary basis for evaluation - \textbf{the risk function}.
+
+$$ R(\theta, \delta) = \mathbb{E}_{\theta}[L(\theta, \delta(X))] $$
+
+The risk is $R(\theta, \delta)$ is the average loss incurred when the decision procedure $\delta$ is used over many draws of the data from its generating distribution $\mathbb{P}_{\theta}$.
+\newline
+\newline
+The risk function gives us a way to compare and rule out procedures. 
+\newline
+\newline
+$\delta$ is \textbf{inadmissible} if there exists $\delta'$ such that $R(\theta, \delta') \leq R(\theta, \delta)$ for all $\theta$ and  
+$R(\theta', \delta') < R(\theta', \delta)$ for some $\theta'$.
 \end{frame}
 
 % Analyzing Procedures 2
 \begin{frame}
+\frametitle{Analyzing Procedures}
+\textbf{Example 4} (Weighted coin flips)
+\newline
+\newline
+For estimating the probability of heads $\theta$, let us consider three possible decision procedures:
+
+\begin{enumerate}
+\item{$\delta_{n}(X) = \frac{1}{n} \sum_{i=1}^n X_i$ be the sample mean of the first n data points}
+
+\item{$\delta_1(X)$ = naive estimator that uses the outcome of just one flip}
+
+\item{$\delta_{\text{goofy}}(X) = \frac{1}{2}$ which is a fixed constant}	
+
+\end{enumerate}
+
+\vspace{10pt}
+Under the loss function $L(\theta, d) = (\theta - d)^2$ the risk of each is:
+
+\begin{enumerate}
+
+\item{$R(\theta, \delta_n) = \mathbb{E}_{\theta}[(\theta - \delta_n(X))^2] = \frac{\theta(1-\theta)}{n}$}
+
+\item{$R(\theta, \delta_1) = \mathbb{E}_{\theta}[(\theta - \delta_1(X))^2] = \theta(1-\theta)$}
+
+\item{$R(\theta, \delta_{\text{goofy}}) = (\theta - \frac{1}{2})^2$}
+
+\end{enumerate}
+\vspace{10pt}
+Which one is the best procedure?
 \end{frame}
 
 % Analyzing Procedures 3
 \begin{frame}
+\frametitle{Analyzing Procedures}
+Clearly there is no uniformly best procedure, to develop concrete notions of optimality we must induce an optimizable problem.
+\begin{figure}
+	\includegraphics[width=0.8\textwidth]{risk.png}
+\end{figure}
+\end{frame}
+
+
+% Analyzing Procedures 4
+\begin{frame}
+\frametitle{Optimal Inference}
+To develop our theory of optimality we change the requirements of our decision problem. 
+\newline
+\newline
+In particular, we try to induce an optimizable problem by taking one of the following actions:
+\newline
+
+\begin{enumerate}
+\item{
+\textbf{Constrain} the set of decision procedures under consideration, by requiring our procedures to satisfy criteria like unbiasedness or invariance.
+\newline
+\begin{enumerate}[(a)]
+\item{Unbiased estimators: we say that $\delta$ is unbiased for estimating $g(\theta)$ if $\mathbb{E}_{\theta}[\delta(X)] = g(\theta)$}
+\newline
+\item{Equivariance or invariance: enforce symmetries in the decision procedure. For example, location invariance requires an estimator to satisfy $\delta(X + c) = \delta(X) + c$}
+\end{enumerate}
+}	
+\end{enumerate}	
+\end{frame}
+
+% Analyzing Procedures 5
+\begin{frame}
+\frametitle{Optimal Inference}
+\begin{enumerate}
+	
+\setcounter{enumi}{1}
+
+\item{
+\textbf{Collapse} the risk function into a single numerical summary and minimize this overall summary of risk instead of requiring uniformly lower risk.
+\newline
+\begin{enumerate}[(a)]
+\item{Bayes procedures minimize the average risk $\int R(\theta, \delta)d\Lambda(\theta)$ where $\Lambda$ is a probability distribution (the prior distribution) over $\Omega$.}
+\newline
+\item{Minimax procedures minimize the worst-case risk, $\sup_{\theta \in \Omega} R(\theta, \delta)$, and hence achieve the best worst-case performance.}
+\end{enumerate}
+}	
+\end{enumerate}
+\vspace{10pt}
+These principles are foundational to the theory of optimal inference and apply both in the context of point estimation and hypothesis testing.
 \end{frame}
 
 \end{document}
