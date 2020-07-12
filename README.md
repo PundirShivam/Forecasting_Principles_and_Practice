@@ -8,11 +8,11 @@ The work done here is part of an informal study group the schedule for which is 
 |   Date    |   Content    |    Presenter   |
 |---|---|---|
 |   2020-07-05  | Chapters 1 and 2  |   Nishant |
-|   2020-07-12  | Chapters 3 and 4      |   |
-|   2020-07-19  | Chapters 5 and 6      |   |
-|   2020-07-26  | Chapters 7 and 8      |   |
-|   2020-08-02  | Chapters 9 and 10     |   |
-|   2020-08-09  | Chapters 11 and 12    |   |
+|   2020-07-12  | Chapters 3 and 4  |   Shivam  |
+|   2020-07-19  | Chapters 5 and 6  |   Deepak  |
+|   2020-07-26  | Chapters 7 and 8  |   Nishant |
+|   2020-08-02  | Chapters 9 and 10 |   Shivam  |
+|   2020-08-09  | Chapters 11 and 12|   Deepak  |
 
 We're using the 2nd edition instead of the newer 3rd. edition as it contains more exposition on a few topics of interest.
 The original textbook focuses on the R language, we've chosen instead to use Python.
