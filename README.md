@@ -25,3 +25,5 @@ Directory Structure:
 [`data/`](https://github.com/PundirShivam/Forecasting_Principles_and_Practice/tree/master/data) - contains raw data from textbook + data from reference R package <br>
 [`utils/`](https://github.com/PundirShivam/Forecasting_Principles_and_Practice/tree/master/utils) - contains some common plotting and statistical functions   
 
+Data Source:
+https://vincentarelbundock.github.io/Rdatasets/datasets.html
