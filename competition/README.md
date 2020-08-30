@@ -10,7 +10,7 @@ An additional data set is provided with daily rainfall (in mm) in each of the fo
 
 ### Objective
 
-**Forecast the total water availability across the four reservoirs for every day in 2019 ** 
+**Forecast the total water availability across the four reservoirs for every day in 2019** 
 
 Prepare a `predictions.csv` file with the following format:
 
